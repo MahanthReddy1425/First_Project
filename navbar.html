@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+
+        }
+        .navul{
+            display: flex;
+            list-style: none;
+            flex-direction: row;
+            gap:110px;
+        }
+        .slider{
+            color: white;
+            transform: translatex(-100px);
+            transition-delay: 2s;
+            transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        #toggle:checked ~ .slider{
+            transform: translate(0px);
+            
+            .sliderul{
+                background-color: blue;
+                margin-top: 20px;
+                width: 100px;
+                display: show;
+                display: flex;
+                list-style: none;
+                flex-direction: column;
+                gap:10px;
+            }
+            
+        }
+        .nav{
+            background-color: black;
+            margin-top: -10px;
+            height: 50px;
+            color: white;
+            padding-top: 30px;  
+        }
+        #toggle,#tog{
+            display: none;
+        }
+        @media screen and (max-width:600px) {
+            .nav{
+            }
+            .icon{
+                display:block;
+            }
+            .show{
+                display: none;
+            }
+            #tog{
+                display: block;
+            }
+            #toggle{
+                margin-bottom: 10px;
+                display: block;
+            }
+            .sliderul{
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="checked" id="toggle">
+    <div class="nav">
+        <ul class="navul">
+            <li class="icon"><label for="toggle"><i id="tog" class="fa-solid fa-bars"></i></label></li>
+            <li class="icon"><img src="./Picture1.png" alt="" width="70px" height="50px"></li>
+            <li class="show">Home</li>
+            <li class="show">Pages</li>
+            <li class="show">Policies & Condidtions</li>
+            <li class="show">Blog</li>
+            <li class="show">Events</li>
+            <li class="show">Community</li>
+            <li class="show">Students</li>
+            <li class="show">Icons</li>
+            <li ><i class="fa-solid fa-moon"></i></li>
+        </ul>
+    </div>
+    <div class="slider">
+        <ul class="sliderul">
+            <li>Home</li>
+            <li>Pages</li>
+            <li>Policies & Condidtions</li>
+            <li>Blog</li>
+            <li>Events</li>
+            <li>Community</li>
+            <li>Students</li>
+            <li>Icons</li>
+        </ul>
+
+    </div>
+</body>
+</html>

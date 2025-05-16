@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            background-color: yellowgreen;
+            display: grid;
+            column-gap: 10px;
+            row-gap: 10px;
+            /* grid-template-columns:1fr minmax(300px,1fr) 1fr; */
+            /* grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); */
+            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+        }
+        .para{
+            background-color: blueviolet;
+            padding: 20px;
+            color: white;
+        }
+        .outer{
+            background-color: green;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 200px 200px  auto;
+            gap: 10px;
+            grid-auto-flow: row;
+        }
+        .box{
+            background-color: grey;
+            font-size: 4rem;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        .box1{
+            grid-row-start:1 ;
+            grid-row-end:2;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        .box3{
+            grid-row-start:1 ;
+            grid-row-end:3;
+        }
+        /* .box2{
+            grid-row-start: 1;
+            grid-row-end: 3;
+        } */
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        
+    </div>
+    <div class="container">
+        <div class="para">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nemo ea? Accusamus adipisci, asperiores tempora quos temporibus magnam rerum sed. Totam, necessitatibus aliquid nam, neque adipisci blanditiis sed rerum veritatis laudantium sequi possimus atque, hic exercitationem. Voluptate provident exercitationem quae?</p>
+        </div>
+        <div class="para">
+            <p>Libero earum deserunt quia ducimus corrupti accusamus adipisci quas consectetur porro blanditiis voluptatum molestias amet sapiente nihil iusto placeat possimus, quisquam fugiat quam obcaecati? Quam sequi repellat minima dolore eaque sed fuga rem, cum aliquid rerum impedit sapiente eligendi aspernatur?</p>
+        </div>
+        <div class="para">
+            <p>Veniam aperiam, esse asperiores sapiente aliquid id laboriosam! Corrupti expedita nisi facilis deserunt, ut, repudiandae obcaecati sequi quos deleniti quas unde at, iusto eveniet. Qui illum, voluptatum hic quam quae cum optio quod cupiditate laborum est, eveniet officia magni? Dolorem.</p>
+        </div>
+        <div class="para">
+            <p>Itaque eaque rerum porro, vero dolore odit id hic quas eum officia corrupti veritatis iste asperiores accusamus minima. Temporibus eaque ut architecto odio quidem fuga perferendis, sapiente vitae saepe? Aut, non sed adipisci pariatur perferendis vitae reiciendis porro dignissimos corporis!</p>
+        </div>
+        <div class="para">
+            <p>At inventore libero veritatis et, fuga nesciunt quia neque aspernatur magni. Quam mollitia, sit, deleniti labore aspernatur, non sed dicta saepe nostrum doloremque fugiat reprehenderit cumque unde sint expedita? Tenetur voluptas dicta exercitationem veniam sed itaque iure debitis, quod est!</p>
+        </div>
+        <div class="para">
+            <p>Ullam recusandae, et fugiat nemo quam, accusamus magni sit laudantium numquam assumenda facere tempora sint fugit neque, ea officiis id qui consequatur! Deleniti obcaecati voluptates ipsum alias nobis voluptas reprehenderit vero sint tempora facilis officiis laudantium, totam, modi, porro aliquam.</p>
+        </div>
+        <div class="para">
+            <p>Quas porro voluptas officia laudantium fuga sunt, veniam assumenda atque amet, dicta repellendus ad nostrum consequuntur exercitationem id quasi maxime suscipit molestiae nesciunt! Dolores ab iste temporibus perspiciatis repellat labore dicta saepe, nostrum id hic adipisci quae nihil fuga obcaecati?</p>
+        </div>
+        <div class="para">
+            <p>Tenetur, eveniet quia dignissimos aspernatur ipsum earum. Veritatis suscipit totam nemo quod odio fugit doloribus soluta quidem nam libero aut possimus ab illum, laboriosam deserunt mollitia dicta vero ex adipisci commodi at veniam velit voluptatum perspiciatis. Harum, possimus laudantium? Ut.</p>
+        </div>
+        <div class="para">
+            <p>Natus expedita porro, ea consequuntur nihil perspiciatis aut illo. Laudantium, maxime totam. Sed soluta tempore neque fugiat vitae enim, debitis sunt magnam atque aperiam! Illo, adipisci deleniti. Magni provident nam officiis molestiae asperiores voluptatem sit nesciunt molestias, consequatur reiciendis minus.</p>
+        </div>
+        <div class="para">
+            <p>Neque, esse tempore ea vitae delectus consectetur iste odio a vero cumque optio temporibus? Sunt corrupti exercitationem quas nostrum vero, obcaecati fugit aut, nemo architecto quo alias provident neque eaque velit, aliquam reiciendis amet assumenda? Nesciunt beatae voluptates consequuntur perspiciatis.</p>
+        </div>
+    </div>
+</body>
+</html>

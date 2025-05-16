@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            position: relative;
+            display: flex;
+        }
+        .head{
+            position: absolute;
+            width: 300px;
+            height: 100px;
+            left: 480px;
+            top: 500px;
+            background-color: rgb(85, 161, 158);
+            border-radius: 50%;
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            display: none;
+            .res{
+                position: absolute;
+                left: 30px;
+                top: 25px;
+            }
+
+        }
+        .div1,.div2,.div3{
+            position: absolute;
+            top: 200px;
+            width: 250px;
+            height: 250px;
+            border: 5px solid rgb(83, 77, 77);
+            font-size: 50px;
+            display: none;
+        }
+        .div1{
+           left: 150px;
+        }
+        .div2{
+            left: 550px;
+        }
+        .div3{
+            left: 950px;
+
+        }
+        .input1,.input2,.input3
+        {
+            font-size: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            position: absolute;
+            width: 500px;
+            
+        }
+        .input1{
+            left: 10px;
+            label,input{
+                position: absolute;
+                top: 20px;
+                left: 50px;
+            }            
+            input{
+                left: 280px;
+                width: 130px;
+                height: 30px;
+                border: 2px solid rgb(16, 46, 179);
+            }
+        }
+        .input2{
+            label,input{
+                position: absolute;
+                top: 20px;
+                left: 450px;
+                width: 400px;
+            }            
+            input{
+                left: 680px;
+                width: 130px;
+                height: 30px;
+                border: 2px solid rgb(16, 46, 179);
+            }
+        }
+            .input3{
+            label,input{
+                position: absolute;
+                top: 20px;
+                left: 850px;
+                width: 400px;
+            }            
+            input{
+                left: 1080px;
+                width: 130px;
+                height: 30px;
+                border: 2px solid rgb(16, 46, 179);
+            }
+        }
+        #okbtn{
+            width: 70px;
+            height: 50px;
+            border: 2px solid black;
+            font-size: 20px;
+            position: absolute;
+            top: 100px;
+            left: 550px;
+        }
+        .pl1,.pl2,.pl3{
+            width: 120px;
+            height: 50px;
+            font-size: 25px;
+            position: absolute;
+            top: 150px;
+        }
+        .pl1{
+           left: 230px;
+        }
+        .pl2{
+            left: 610px;
+        }
+        .pl3{
+            left: 1020px;
+        }
+        .showbtn{
+            width: 170px;
+            height: 50px;
+            font-size: 25px;
+            background-color: rgb(101, 142, 197);
+            border: 2px solid rgb(83, 77, 77); 
+            padding-top: 20px; 
+            position: absolute;
+            left: 550px;
+            top: 50px;
+            display: none;
+        b{
+            padding-left: 15px;
+        }      }
+        </style>
+</head>
+<body>
+    <div class="main">
+        <div class="input1"><label for="">Player 1 name: <br>
+        </label><input type="text"></div>
+        <div class="input2"><label for="">Player 2 name: <br>56
+            
+        </label><input type="text"></div>
+        <div class="input3"><label for="">Player 3 name: <br>
+        </label><input type="text"></div>
+        <br><br>
+        <br>
+        <button  id="okbtn"onclick="start()" >OK</button>
+        <div class="btn-div"></div>
+        <div class="pl1"></div>
+        <div class="pl2"></div>
+        <div class="pl3"></div>
+        <div class="showbtn" onclick="begin()"><b>Start Playing!</b></div>
+        <div class="div1" ><img src="" alt="" class="div1i" width="250px" height="250px"></div>
+        <div class="div2" ><img src="" alt="" class="div2i" width="250px" height="250px"></div>
+        <div class="div3" ><img src="" alt="" class="div3i" width="250px" height="250px"></div>
+
+        <div class="head"><div class="res"></div></div>
+
+    </div>
+    <script src="two_p_game.js"></script>
+</body>
+</html>

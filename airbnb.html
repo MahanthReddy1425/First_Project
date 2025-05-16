@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+        }
+        body{
+            overflow-x: hidden;
+            font-family: Airbnb Cereal VF, Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+
+        }
+        .header{
+            position: relative;
+            top: 0px;
+            .h1{
+                position: absolute;
+                left: 0px;
+                top: 10px;
+                height: 70px;
+                width:100vw;
+                .h11{
+                    font-size: 25px;
+                    color: #e81132;
+                    font-style: bold;
+                    font-weight: 600;
+                    opacity: 80%;
+                    padding-top: 15px;
+                    padding-left: 40px;
+                    height: 100px;
+                    .h1t{
+                        position: absolute;
+                        left: 80px;
+                        top: 18px;
+                    }
+                }
+                .h12{
+                    position: absolute;
+                    height: 36px;
+                    width: 350px;
+                    box-shadow: 1px 1px 1px 2px rgba(128, 128, 128, 0.274);
+                    border-radius: 30px;
+                    left: 500px;
+                    top: 7px;
+                    display: flex;
+                    padding: 5px;
+                    .h121,.h122,.h123,.h124{
+                        position: absolute;
+                        top: 14px;
+                        font-weight: 500;
+                        font-size: 15px;
+                    }
+                    .h121{
+                        left: 20px;
+                        border-right: 1px solid black;
+                    }
+                    .h122{
+                        left: 116px;
+                        border-right: 1px solid black;
+
+                    }
+                    .h123{
+                        left:215px;
+                        opacity: 80%;
+                    }
+                    .h124{
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        background-color: #cf4257;
+                        left: 315px;
+                        top: 3px;
+                        padding-left: 5px;
+                        padding-top: 5px;
+                    }
+                }
+                .h13{
+                    position: absolute;
+                    right: 220px;
+                    top: 18px;
+                    font-size: 14px;
+                    font-weight: 550;
+                    color: rgba(0, 0, 0, 0.712);
+                }
+                .h14{
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 160px;
+                    top: 10px;
+                }
+                .h15{
+                    width: 90px;
+                    height: 35px;
+                    position: absolute;
+                    border-radius: 30px;
+                    border: solid black;
+                    right: 20px;
+                    top: 5px;
+                    .dm{
+                        position: absolute;
+                        right: 50px;
+                        top: 05px;
+                    }
+                    .dm2{
+                        position: absolute;
+                        top: 0px;
+                        right:15px;
+
+                    }
+                }
+            }
+            .h2{
+                position: absolute;
+                top: 80px;
+                width: 100vw;
+                padding-top: 5px;
+                box-shadow: 1px 0px 1px 0.5px rgba(128, 128, 128, 0.274);
+             height: 65px;
+                left: -10px;
+                border-radius: 10px;
+                .h21,.h22,.h23{
+                    position: absolute;
+                }
+                .h23{
+                    right: 40px;
+                    top: 20px;
+                }
+                .h21{
+                    display: flex;
+                    gap: 5px;
+                    img{
+                        width: 22px;
+                        height: 20px;
+                        opacity: 90%;
+                        margin-bottom: 10px;
+                    }
+                    button{
+                        width: 90px;
+                        padding-bottom: 8px;
+                        border: 2px solid rgba(255, 255, 255, 0);
+                        text-align: center;
+                        opacity: 80%;
+                        background: none;
+                        font-size: 13px;
+                        width: auto;
+                        margin-left: 30px;
+                        margin-top: 5px;
+                        opacity: 75%;
+
+                    }
+                    button:hover{
+                        opacity: 100%;
+                        border-bottom: 2px solid black;
+                    }
+                }
+
+                .h22{
+                    position: absolute;
+                    height: 30px;
+                    width: 80px;
+                    border: solid black;
+                    border-radius: 30px;
+                    left: 1000px;
+                    top: 20px;
+                    span{
+                        font-size: 20px;
+                        padding: 10px;
+                        padding-top: 200px;
+                    }
+                }
+            }
+            position: fixed;
+            z-index: 1;
+            background-color: white;
+            width: 100vw;
+            height: 151px ;
+            left: 0px;
+        }
+        .middle{
+            position: absolute;
+            top: 165px;
+            width: 100vw;
+            height: 600px;
+            border: 2px sold red;
+            display: grid;
+            padding-left: 40px;
+            padding-right: 30px;
+            grid-template-columns:repeat(4,325px) ;
+            .mid1,.mid2,.mid3,.mid4,.mid5,.mid6,.mid7,.mid8,.mid9,.mid10,.mid12,.mid11,.mid13,.mid14,.mid15,.mid16{
+                height: 400px;
+                
+                img{
+                    border-radius: 20px;
+                    width: 300px;
+                    height: 270px;
+                }
+            }
+            div:hover{
+transform: translate(0, -5px);
+            }
+            line-height: 23px;
+            color: rgb(21, 20, 20);
+            
+            .sa{
+                font-size: 16px;
+                font-weight: 550;
+                opacity: 190% !important;
+                
+                font-family: sans-serif;
+            }
+            a{
+                opacity: 130%;
+                color: black;
+                font-weight: 600;
+            }
+            span{opacity: 85%;}
+
+        }
+        .des{
+            position: relative;
+            top: 1800px;
+            .d2,.d3{
+                display: grid;
+                position: absolute;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                opacity: 80%;
+                font-size: 15px;
+            }
+            .d2{
+                gap: 45px;
+                left: 80px;
+                top: 60px;
+                b:hover{
+                    border-bottom: 0.5px solid black;
+                }
+            }
+            .d3{
+                grid-template-columns: 1fr 1fr 1fr;
+                top: 380px;
+                gap: 20px;
+                
+                
+                left: 40px;
+                .div21{
+                    div{
+                        width: auto;
+                        padding-top: 20px;
+                    }
+                    div:hover{
+                    border-bottom: 0.5px solid black;
+                }
+                }
+                
+                .div28{
+                    padding-left: 70px;
+                    div{
+                    width: auto;
+                    padding-bottom: 20px;}
+                }
+                .div216{
+                    padding-left: 150px;
+                    div{
+                    width: auto;
+                    padding-bottom: 20px;}
+                }
+
+            }
+           .d4{
+            position: absolute;
+            top: 700px;
+            display: flex;
+            padding-bottom: 30px;
+            .d41{
+                padding-left: 40px;
+            }
+            .d42{
+                padding-left: 600px;
+            }
+           }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="h1">
+        <div class="h11"><img src="/img/airbnb.png" alt="" width="35px" height="35px"><div class="h1t">airbnb</div></div>
+        <div class="h12">
+            <div class="h121">Anywhere&emsp;</div>
+            <div class="h122">Any week&emsp;</div>
+            <div class="h123">Add guests</div>
+            <div class="h124"><img src="/img/icons8-search-50.png" alt="" width="30px" height="30px"></div>
+        </div>
+        <div class="h13">Airbnb your home</div>
+        <div class="h14"><img src="/img/icons8-globe-50.png" width="30px" height="30px" alt=""></div>
+        <div class="h15"><div class="dm">&emsp;<img src="/img/icons8-menu-48.png" alt="" width="20px" height="20px"></div><div class="dm2"><img src="/img/icons8-male-user-48.png" alt="" width="30px" height="30px"></div></div>
+        </div>
+        <div class="h2">
+            <div class="h21">
+                <button><img src="/img/Document_files/1.jpg" alt=""><br>
+                    Top of the World</button>
+                    <button><img src="/img/Document_files/2.webp" alt=""><br>Icons</button>
+                <button><img src="/img/Document_files/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg" alt=""><br>
+                    Amazing views</button>
+                    <button><img src="/img/Document_files/3.jpg" alt=""><br>Islands</button>
+                    <button><img src="/img/Document_files/4.jpg" alt=""><br>
+                        Treehouses</button>
+                        <button><img src="/img/Document_files/3fb523a0-b622-4368-8142-b5e03df7549b.jpg" alt=""><br> Pools</button>
+                        <button><img src="/img/Document_files/5.jpg" alt=""><br>
+                            Windmills</button>
+                            <button><img src="/img/Document_files/6.jpg" alt=""><br>Countryside</button>
+                            <button><img src="/img/Document_files/7.jpg" alt=""><br>
+                                OMG!</button>
+                                <button><img src="/img/Document_files/8.jpg" alt=""><br>Luxe</button>
+            </div>
+            <div class="h22"><span style="color: black">Filters</span></div>
+            <div class="h23" style="color: black; font-size: 20px; color: #e81132;">Prices includes all prices</div>
+        </div>
+    </div>
+        <div class="middle">
+            <div class="mid1">
+                <div class="img1"><img src="/img/Document_files/airbnb1.png" alt="" >
+                </div>
+                <div class="text1"><span><span class="sa">Keylong,India</span><br>3,061m elevation <br>5-10 May
+                <br><span><a href="">₹4,505</a></span>&ensp;for 5 nights</span></div>
+            </div>
+            <div class="mid2"><div class="img1"><img src="/img/ab1.png" alt="" >
+                </div>
+                <div class="text1"><span><span class="sa">Keylong,India</span><br>3,061m elevation <br>5-10 May
+                <br><span><a href="">₹4,505</a></span>&ensp;for 5 nights</div></div>
+            <div class="mid3"><div class="img1"><img src="/img/ab2.png" alt="" >
+                </div>
+                <div class="text1"><span><span class="sa">Keylong,India</span><br>3,061m elevation <br>5-10 May
+                <br><span><a href="">₹4,505</a></span>&ensp;for 5 nights</div></div>
+            <div class="mid4"><div class="img1"><img src="/img/ab3.png" alt="" >
+                </div>
+                <div class="text1"><span><span class="sa">Keylong,India</span><br>3,061m elevation <br>5-10 May
+                <br><span><a href="">₹4,505</a></span>&ensp;for 5 nights</div></div>
+            <div class="mid5"><div class="img1"><img src="/img/ab4.png" alt="" >
+                </div>
+                <div class="text1"><span><span class="sa">Keylong,India</span><br>3,061m elevation <br>5-10 May
+                <br><span><a href="">₹4,505</a></span>&ensp;for 5 nights</div></div>
+            <div class="mid6"><div class="img1"><img src="/img/ab5.png" alt="" >
+                </div>
+                <div class="text1"><span><span class="sa">Keylong,India</span><br>3,061m elevation <br>5-10 May
+                <br><span><a href="">₹4,505</a></span>&ensp;for 5 nights</div></div>
+            <div class="mid7"><div class="img1"><img src="/img/ab6.png" alt="" >
+                </div>
+                <div class="text1"><span><span class="sa">Keylong,India</span><br>3,061m elevation <br>5-10 May
+                <br><span><a href="">₹4,505</a></span>&ensp;for 5 nights</div></div>
+            <div class="mid8"><div class="img1"><img src="/img/ab7.png" alt="" >
+                </div>
+                <div class="text1"><span><span class="sa">Keylong,India</span><br>3,061m elevation <br>5-10 May
+                <br><span><a href="">₹4,505</a></span>&ensp;for 5 nights</div></div>
+            <div class="mid9"><div class="img1"><img src="/img/ab8.png" alt="" >
+                </div>
+                <div class="text1"><span><span class="sa">Keylong,India</span><br>3,061m elevation <br>5-10 May
+                <br><span><a href="">₹4,505</a></span>&ensp;for 5 nights</div></div>
+            <div class="mid10"><div class="img1"><img src="/img/ab9.png" alt="" >
+                </div>
+                <div class="text1"><span><span class="sa">Keylong,India</span><br>3,061m elevation <br>5-10 May
+                <br><span><a href="">₹4,505</a></span>&ensp;for 5 nights</div></div>
+            <div class="mid11"><div class="img1"><img src="/img/ab4.png" alt="" >
+                </div>
+                <div class="text1"><span><span class="sa">Keylong,India</span><br>3,061m elevation <br>5-10 May
+                <br><span><a href="">₹4,505</a></span>&ensp;for 5 nights</div></div>
+            <div class="mid12"><div class="img1"><img src="/img/ab5.png" alt="" >
+                </div>
+                <div class="text1"><span><span class="sa">Keylong,India</span><br>3,061m elevation <br>5-10 May
+                <br><span><a href="">₹4,505</a></span>&ensp;for 5 nights</div></div>
+            <div class="mid13"><div class="img1"><img src="/img/ab6.png" alt="" >
+                </div>
+                <div class="text1"><span><span class="sa">Keylong,India</span><br>3,061m elevation <br>5-10 May
+                <br><span><a href="">₹4,505</a></span>&ensp;for 5 nights</div></div>
+            <div class="mid14"><div class="img1"><img src="/img/ab7.png" alt="" >
+                </div>
+                <div class="text1"><span><span class="sa">Keylong,India</span><br>3,061m elevation <br>5-10 May
+                <br><span><a href="">₹4,505</a></span>&ensp;for 5 nights</div></div>
+            <div class="mid15"><div class="img1"><img src="/img/ab8.png" alt="" >
+                </div>
+                <div class="text1"><span><span class="sa">Keylong,India</span><br>3,061m elevation <br>5-10 May
+                <br><span><a href="">₹4,505</a></span>&ensp;for 5 nights</div></div>
+            <div class="mid16"><div class="img1"><img src="/img/ab9.png" alt="" >
+                </div>
+                <div class="text1"><span><span class="sa">Keylong,India</span><br>3,061m elevation <br>5-10 May
+                <br><span><a href="">₹4,505</a></span>&ensp;for 5 nights</div></div>
+        </div>
+        <div class="des">
+            <div class="d1"><h4 style="font-size: 24px;font-weight: 500;opacity: 90%;padding-left: 30px;">Inspiration for Future Gateway<hr></h4>
+                  
+           </div>
+          
+
+            <div class="d2">
+               
+
+                <div class="div1"><b>Yurt Rentals</b><br>United States</div>
+                <div class="div2"><b>Yurt Rentals</b><br>United States</div>
+                <div class="div3"><b>Farm Houses</b><br>United States</div>
+                <div class="div4"><b>Farm Cottages</b><br>United States</div>
+                <div class="div5"><b>Castle Rentals</b><br>United States</div>
+                <div class="div6"><b>Luxury Cabins</b><br>United States</div>
+                <div class="div7"><b>HouseBoat</b><br>United States</div>
+                <div class="div8"><b>Private Island Rentals</b><br>United States</div>
+                <div class="div9"><b>Holiday Chalets</b><br>United States</div>
+                <div class="div10"><b>Cabin Rentals</b><br>United States</div>
+                <div class="div11"><b>Villa</b><br>United States</div>
+                <div class="div12"><b>Bungalow Rentals</b><br>United States</div>
+                <div class="div13"><b>HouseBoat</b><br>United States</div>
+                <div class="div14"><b>Private Island Rentals</b><br>United States</div>
+                <div class="div15"><b>Holiday Chalets</b><br>United States</div>
+                <div class="div16"><b>Cabin Rentals</b><br>United States</div>
+                <div class="div17"><b>Villa</b><br>United States</div>
+                <div class="div18"><b>More</b><br>United States</div>
+            </div>
+            <div class="d3">
+                <div class="div21"><b>Support <br><br></b>
+                <div class="div22">Help Centre</div>
+                <div class="div23">AirCover</div>
+                <div class="div24">Anti-discrimination</div>
+                <div class="div25">Disability support</div>
+                <div class="div26">Cancellation options</div>
+                <div class="div27">Report neighbourhood concern</div></div>
+                
+                <div class="div28"><b>Hosting</b><br> <br><div class="div29">Airbnb your home</div>
+                <div class="div210">AirCover for Hosts</div>
+                <div class="div211">Hosting resources</div>
+                <div class="div212">Community forum</div>
+                <div class="div213">Hosting responsibly</div>
+                <div class="div214">Join a free Hosting class</div>
+                <div class="div215">Find a co-host</div></div>
+                
+                <div class="div216"><b>Airbnb</b> <br><br><div class="div217">Newsroom</div>
+                <div class="div218">New features</div>
+                <div class="div219">Careers</div>
+                <div class="div220">Investors</div>
+            <div class="div221">Airbnb.org emergency stays
+            </div></div>
+                
+               
+    
+            </div>
+            <div class="d4">
+                <div class="d41">© 2025 Airbnb, Inc. · Privacy · Terms · Sitemap · Company details</div>
+                <div class="d42">
+                English (IN)
+                ₹ INR</div></div>
+               
+                </div>
+    
+</body>
+</html>

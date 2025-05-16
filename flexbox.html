@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-Box</title>
+    <style>
+        .container{
+            min-height: 400px;
+            background-color: yellowgreen;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: ce nter;
+            flex-wrap:nowrap;
+            font-size: 3rem;
+        }
+        .box{
+            background-color: yellow;
+            height: 100px;
+            width: 100px;
+            border: 2px solid white;
+        }
+        .x1{
+        }
+        .x2{
+        }
+        .x3{
+        }
+        .x4{
+        }
+        .main{
+            display: flex;
+            flex-direction: column;
+        }
+        .para1,.para2,.para3{
+            float:left;
+            padding: 10px;
+        }
+        .para1{
+            background-color: red;
+            flex:1;
+            order: 2;
+        }
+        .para2{
+            background-color: blue;
+            flex:1 ;
+            order:1;
+        }
+        .para3{
+            background-color: green;
+            flex:1;
+            order:3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mahanth Reddy</h1>
+    <div class="container">
+        <div class="box x1">1</div>
+        <div class="box x2">2</div>
+        <div class="box x3">3</div>
+        <div class="box x4">4</div>
+    </div>
+    <div class="main">
+    <div class="para1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non repudiandae doloribus praesentium consectetur expedita! Dicta natus voluptas quas necessitatibus fugiat libero enim vitae! Minima molestias iste, aspernatur aut odit fuga voluptas recusandae delectus ad magni. Sit mollitia, quos qui quaerat saepe maiores quibusdam? Illum fuga rerum non itaque ducimus doloremque?</p>
+    </div>
+    <div class="para2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non repudiandae doloribus praesentium consectetur expedita! Dicta natus voluptas quas necessitatibus fugiat libero enim vitae! Minima molestias iste, aspernatur aut odit fuga voluptas recusandae delectus ad magni. Sit mollitia, quos qui quaerat saepe maiores quibusdam? Illum fuga rerum non itaque ducimus doloremque?</p>
+    </div>
+    <div class="para3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non repudiandae doloribus praesentium consectetur expedita! Dicta natus voluptas quas necessitatibus fugiat libero enim vitae! Minima molestias iste, aspernatur aut odit fuga voluptas recusandae delectus ad magni. Sit mollitia, quos qui quaerat saepe maiores quibusdam? Illum fuga rerum non itaque ducimus doloremque?</p>
+    </div>
+</div>
+</body>
+</html>

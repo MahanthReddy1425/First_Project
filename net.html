@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        body{
+            background: url('/img/netflix.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+
+        }
+        .form_div{
+            height:600px;
+            width: 400px;
+            background-color: rgba(5, 5, 5, 0.87);
+            padding-top: 35px;
+            padding-left:50px;
+            padding-right: 50px;
+            box-sizing: border-box;
+            margin-top: -10px;
+            margin-left: 455px;
+            font-size: 1.5em;
+            color: white;
+            border-radius: 3px;
+
+
+        }
+        .block,.block1{
+                display: block;
+            }
+            .block1{
+                margin-top: ;
+                font-size: 30px;
+            }
+        .input,.input1{
+                background-color: rgba(18, 19, 19, 0.616);
+                width: 90%;
+                height: 35px;
+                font-size: 15px;
+                margin-top: 12px;
+                margin-left: 8px;
+                padding: 5px;
+                border: 0.2px solid white;
+                color:rgb(180, 155, 107);
+                border-radius: 4px;
+            }
+            input::placeholder{
+                opacity: 20;
+                transform: top;
+            }
+            .input:focus,.input1:focus{
+                background-color:rgba(18, 19, 19, 0.616);
+                outline-color:   white ;
+                outline-style: double;
+                outline-width: 3px;
+            }
+            .input1{
+                margin-top: 25px;
+            }
+            button{
+                margin-top: 15px;
+                margin-left: 11px;
+                height: 35px;
+                width: 94%;
+                font-size: 0.56em;
+                opacity: 20;
+                background-color: rgba(223, 15, 15, 0.822);
+                border:none;
+                color:aliceblue;
+            }
+            button:hover{
+                background-color: rgba(207, 28, 28, 0.822);
+            }
+            radio{
+                padding: 5px;
+            }
+            center{
+                margin-top: 12px;
+                font-size: 14px;
+            }
+            .s2{
+                background-color: rgba(136, 134, 132, 0.411)
+            }
+            .s2:hover{
+                background-color: rgba(122, 121, 119, 0.336)
+            }
+            .cen{
+                font-c: white;
+            }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="main" style="font-size: 40px;color: rgb(194, 44, 44);font-weight: bold;">&emsp;&emsp;&ensp;&emsp;<img src="/img/icons8-netflix-logo-48.png" alt="" width="120px" height="120px"></div>
+    <div class="form_div">
+        <form action="">
+            <div class="ip_username">
+            <label class="block1" for="username"><b>Sign In</b></label>
+        
+            <input class="input1" type="text" placeholder="&nbsp;Email or mobile number" name="username" id="username">
+            </div>
+            <div class="ip_password">
+                <input class="input" type="password" name="password" id="password" placeholder=" &nbsp;Password">
+            <br>
+                <button type="submit" class="sb"><b>Sign In</b></button><br>
+                    <label><center>OR</center></label>
+                    <button type="submit" class="s2"><b>Use a sign-in code</b></button><br>
+                    <center class="cen"><a href="/img/net.html" style="color: white;font-size: 14px;">Forgot password?</b></a><br></center>
+                    <input type="checkbox" name="" id="">
+                    <label for="checkbox" style="font-size: 15px;">Remember me</label><br>
+                    <p style="font-size: 15px;">New to Netflix?<a href="net.html" style="color: white;"><b>Sign up now.</b></a></p>
+                    <p style="font-size: 12px;">This page is protected by Google reCAPTCHA to ensure you're not a bot. <br>
+            <a href="net.html" style="color: rgb(39, 146, 207);font-size: 15px;">Learn more.</a></p>
+        </form>
+    </div>
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random_Color</title>
+    <style>
+        .div{
+            height: 40vh;
+            width: 60vw;
+            background-color: red;
+            position: relative;
+            top: 18vh;
+            left: 250px;
+            border: 5px solid black;
+        }
+        #btn1{
+            height: 40px;
+            width: 180px;
+            position: relative;
+            top: 170px;
+            left: 550px;
+            background-color: aquamarine;
+            border: 4px solid gray;
+        }
+        #btn2{
+            height: 40px;
+            width: 180px;
+            position: relative;
+            top: 220px;
+            left: 367px;
+            background-color: orange;
+            border: 4px solid gray;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="color: brown; text-align: center;font-size: 35px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Random Color Generator</h1>
+    <div class="div"></div>
+    <button onclick="change_div_color()" id="btn1">Change Box Color</button>
+    <button onclick="change_body_color()" id="btn2">Change background Color</button>
+    <script>
+        document.getElementById('btn1').addEventListener('onclick',btn1)
+        document.getElementById('btn2').addEventListener('onclick',btn2)
+        let blank1=""
+        let blank2=""
+        let hex="0123456789abcdef"
+        function change_div_color(){
+            blank1="#"
+            for(let i=0;i<6;i++){
+                blank1+=hex[Math.floor(Math.random()*16)]
+            }
+            document.getElementsByClassName('div')[0].style.backgroundColor= blank1
+        }
+        function change_body_color(){
+            blank2="#"
+            for(let i=0;i<6;i++){
+                blank2+=hex[Math.floor(Math.random()*16)]
+            }
+            document.body.style.backgroundColor= blank2
+        }
+    </script>
+    
+</body>
+</html>

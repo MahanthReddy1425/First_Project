@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width:300px;
+            height: 200px;
+        }
+        .d1,.d2,.d3,.d4{
+            height: 200px;
+            width: 200px;
+        }
+        .d1{
+            background-color: orange;
+        }
+        .d2{
+            background-color: aqua;
+        }
+        .d3{
+            background-color: green;
+        }
+        .d4{
+            background-color: red;
+        }
+        @media screen and (min-width:600px) and (max-width:899px) {
+            .d1{
+            display: block;
+        }
+        .d2{
+            display: block;
+        }
+        .d3{
+            display: block;
+        }
+        .d4{
+            display: none;
+        }
+        .d1,.d2,.d3,.d4{
+            width: 300px;
+        }
+                }
+        @media screen and (min-width:0px)  and (max-width:599px){
+            .d1{
+            display: block;
+        }
+        .d2{
+            display: none;
+        }
+        .d3{
+            display: none;
+        }
+        .d4{
+            display: none;
+        }
+        .d1,.d2,.d3,.d4{
+            width: 400px;
+        }
+                }
+    @media screen and (min-width:901px) and (max-width:1200px) {
+            .d1{
+            display: block;
+        }
+        .d2{
+            display: block;
+        }
+        .d3{
+            display: block;
+        }
+        .d4{
+            display: block;
+        }
+        .d1,.d2,.d3,.d4{
+            width: 500px;
+        }
+                }
+        @media screen and (min-width:1201px) {
+            .d1,.d2{
+                width:50%;
+                float:right;
+            }
+            .d3,.d4{
+                width:50%;
+                float:left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="d1"><img src="./ball.jpg" alt=""></div>
+    <div class="d2"><img src="./bat.jpg" alt=""></div>
+    <div class="d3"><img src="./cricket-5348882_1280.jpg" alt=""></div>
+    <div class="d4"><img src="./Netflix-Background.jpg" alt=""></div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Ultimate Quiz</title>
+    <link rel="stylesheet" href="./quiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+            </div>
+            <h1>IPL ULTIMATE QUIZ</h1>
+            <p>Test your knowledge of the Indian Premier League!</p>
+        </div>
+
+        <div class="quiz-container">
+            <div class="quiz-info">
+                <div class="timer">
+                    <i class="fas fa-clock"></i>
+                    <span id="time">60</span>s
+                </div>
+                <div class="score">
+                    <i class="fas fa-trophy"></i>
+                    <span id="score">0</span>/<span id="total-questions">0</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+            </div>
+
+            <div id="question-container" class="hide">
+                <div id="question-number">Question 1</div>
+                <div id="question">Question text goes here</div>
+                <div id="answer-buttons" class="btn-grid">
+                    <!-- Answer buttons will be added here by JavaScript -->
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="start-btn" class="start-btn btn">
+                    <i class="fas fa-play"></i> Start Quiz
+                </button>
+                <button id="next-btn" class="next-btn btn hide">
+                    <i class="fas fa-arrow-right"></i> Next Question
+                </button>
+            </div>
+        </div>
+
+        <div id="results" class="hide">
+            <h2>Quiz Completed!</h2>
+            <div class="final-score">
+                <div class="score-circle">
+                    <div class="circle-back"></div>
+                    <div class="circle-front">
+                        <span id="final-score">0</span>
+                        <small>/<span id="total-questions-final">0</span></small>
+                    </div>
+                </div>
+                <div class="score-message" id="score-message"></div>
+            </div>
+
+            <div class="answers-review">
+                <h3>Review Answers</h3>
+                <div id="answers-container"></div>
+            </div>
+
+            <button id="restart-btn" class="restart-btn btn">
+                <i class="fas fa-redo"></i> Play Again
+            </button>
+        </div>
+    </div>
+
+    <div class="confetti-container" id="confetti-container"></div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>

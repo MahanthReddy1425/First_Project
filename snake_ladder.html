@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snak&lader</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            
+         }
+         .btn{
+            background-color: brown;
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            justify-content: center;
+            top: 400px;
+            left: 1000px;
+         }
+         .btn1{
+            background-color: orange;
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            justify-content: center;
+            top: 500px;
+            left: 1000px;
+         }
+         
+
+        .alldiv{
+            background: url(/img/slb.jpeg);
+            background-repeat: no-repeat;
+            background-size: 700px 600px;
+            display: grid;
+            height: 600px;
+            width: 700px;
+            position: relative;
+            left: 150px;
+            top: 20px;
+            grid-template-columns: repeat(10,70px);
+            grid-template-rows: repeat(10,60px);
+            border: 1px solid black;
+            justify-content: center;           
+
+        }
+
+        .alldiv div{
+            border: 1px solid black;
+            display: flex;
+
+        }
+.img{
+    width: 100px;
+    height: 100px;
+    border: 2px solid red;
+    position: absolute;
+    top: 200px;
+    right: 100px;
+    display: none;
+}
+    </style>
+</head>
+<body>
+    <div class="alldiv">
+        <div class="div100"></div>
+        <div class="div99"></div>
+        <div class="div98"></div>
+        <div class="div97"></div>
+        <div class="div96"></div>
+        <div class="div95"></div>
+        <div class="div94"></div>
+        <div class="div93"></div>
+        <div class="div92"></div>
+        <div class="div91"></div>
+        <div class="div81"></div>
+        <div class="div82"></div>
+        <div class="div83"></div>
+        <div class="div84"></div>
+        <div class="div85"></div>
+        <div class="div86"></div>
+        <div class="div87"></div>
+        <div class="div88"></div>
+        <div class="div89"></div>
+        <div class="div90"></div>
+        <div class="div80"></div>
+        <div class="div79"></div>
+        <div class="div78"></div>
+        <div class="div77"></div>
+        <div class="div76"></div>
+        <div class="div75"></div>
+        <div class="div74"></div>
+        <div class="div73"></div>
+        <div class="div72"></div>
+        <div class="div71"></div>
+        <div class="div61"></div>
+        <div class="div62"></div>
+        <div class="div63"></div>
+        <div class="div64"></div>
+        <div class="div65"></div>
+        <div class="div66"></div>
+        <div class="div67"></div>
+        <div class="div68"></div>
+        <div class="div69"></div>
+        <div class="div70"></div>
+        <div class="div60"></div>
+        <div class="div59"></div>
+        <div class="div58"></div>
+        <div class="div57"></div>
+        <div class="div56"></div>
+        <div class="div55"></div>
+        <div class="div54"></div>
+        <div class="div53"></div>
+        <div class="div52"></div>
+        <div class="div51"></div>
+        <div class="div41"></div>
+        <div class="div42"></div>
+        <div class="div43"></div>
+        <div class="div44"></div>
+        <div class="div45"></div>
+        <div class="div46"></div>
+        <div class="div47"></div>
+        <div class="div48"></div>
+        <div class="div49"></div>
+        <div class="div50"></div>
+        <div class="div40"></div>
+        <div class="div39"></div>
+        <div class="div38"></div>
+        <div class="div37"></div>
+        <div class="div36"></div>
+        <div class="div35"></div>
+        <div class="div34"></div>
+        <div class="div33"></div>
+        <div class="div32"></div>
+        <div class="div31"></div>
+        <div class="div21"></div>
+        <div class="div22"></div>
+        <div class="div23"></div>
+        <div class="div24"></div>
+        <div class="div25"></div>
+        <div class="div26"></div>
+        <div class="div27"></div>
+        <div class="div28"></div>
+        <div class="div29"></div>
+        <div class="div30"></div>
+        <div class="div20"></div>
+        <div class="div19"></div>
+        <div class="div18"></div>
+        <div class="div17"></div>
+        <div class="div16"></div>
+        <div class="div15"></div>
+        <div class="div14"></div>
+        <div class="div13"></div>
+        <div class="div12"></div>
+        <div class="div11"></div>
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+        <div class="div4"></div>
+        <div class="div5"></div>
+        <div class="div6"></div>
+        <div class="div7"></div>
+        <div class="div8"></div>
+        <div class="div9"></div>
+        <div class="div10"></div>
+    </div>
+    
+    <h1 id="head"></h1>
+    <button  onclick="roll()" class="btn">player1</button>
+    <audio id="rollSound" src='/img/snake.mp3'></audio>
+
+    <button onclick="coll()" class="btn1">player2</button>
+    <div class="img"><img src="" alt="" class="imgx" width="100px" height="100px"></div>
+    <script>
+        let dh="123456654321"
+        let c=0
+        let divp1=document.createElement("divp1")
+        divp1.style.height="30px"
+        divp1.style.width="30px"
+        divp1.style.backgroundColor="black"
+        let tile1
+        let a=['','/img/icons8-dice-one-32.png','/img/icons8-dice-two-32.png','/img/icons8-dice-three-32.png','/img/icons8-dice-four-32.png','/img/icons8-dice-five-32.png','/img/icons8-dice-six-32.png']
+        let imgx=document.getElementsByClassName('imgx')[0]
+
+        function coll(){
+            document.getElementsByClassName('img')[0].style.display='block'
+            let sound = document.getElementById("rollSound");
+            sound.play();
+            let random1=parseInt([Math.ceil(Math.random(1,6)*6)])
+            console.log(random1)
+            let tile=""
+            imgx.setAttribute('src',a[random1])
+            if(c+random1<=100){
+                c=c+random1
+                console.log(c,random1)
+                 tile = document.getElementsByClassName(`div${c}`)[0];
+                tile.appendChild(divp1)
+            }
+            if(c==4){
+                c =25;
+                 tile = document.getElementsByClassName(`div${c}`)[0];
+                tile.appendChild(divp1)
+            }
+            if(c==27){
+                c=5;
+                 tile = document.getElementsByClassName(`div${c}`)[0];
+                tile.appendChild(divp1)
+            }
+            if(c==13){
+                c=46;
+                 tile = document.getElementsByClassName(`div${c}`)[0];
+                tile.appendChild(divp1)
+            }
+            if(c==40){
+                c=3;
+                 tile = document.getElementsByClassName(`div${c}`)[0];
+                tile.appendChild(divp1)
+            }
+            if(c==43){
+                c=8;
+                 tile = document.getElementsByClassName(`div${c}`)[0];
+                tile.appendChild(divp1)
+            }
+            if(c==33){
+                c=49;
+                 tile = document.getElementsByClassName(`div${c}`)[0];
+                tile.appendChild(divp1)
+            }
+            if(c==50){
+                c=69;
+                 tile = document.getElementsByClassName(`div${c}`)[0];
+                tile.appendChild(divp1)
+            }
+            if(c==42){
+                c=63;
+                 tile = document.getElementsByClassName(`div${c}`)[0];
+                tile.appendChild(divp1)
+            }
+            if(c==62){
+                c=81;
+                 tile = document.getElementsByClassName(`div${c}`)[0];
+                tile.appendChild(divp1)
+            }
+            if(c==66){
+                c=45;
+                 tile = document.getElementsByClassName(`div${c}`)[0];
+                tile.appendChild(divp1)
+            }
+            if(c==76){
+                c=58;
+                 tile = document.getElementsByClassName(`div${c}`)[0];
+                tile.appendChild(divp1)
+            }
+            if(c==74){
+                c=92;
+                 tile = document.getElementsByClassName(`div${c}`)[0];
+                tile.appendChild(divp1)
+            }
+            if(c==89){
+                c=53;
+                 tile = document.getElementsByClassName(`div${c}`)[0];
+                tile.appendChild(divp1)
+            }
+            if(c==54){
+                c=31;
+                 tile = document.getElementsByClassName(`div${c}`)[0];
+                tile.appendChild(divp1)
+            }
+            if(c==99){
+                c=41;
+                 tile = document.getElementsByClassName(`div${c}`)[0];
+                tile.appendChild(divp1)
+            }
+
+            // if(c+random1==100){
+            //     document.getElementById("head").innerText="you won"
+            // }
+            document.getElementsByClassName('btn')[0].style.display="block"
+            document.getElementsByClassName('btn1')[0].style.display="none"
+         
+
+        }
+       
+        let st=0
+        let divp2=document.createElement("divp2")
+        divp2.style.height="30px"
+        divp2.style.width="30px"
+        divp2.style.backgroundColor="green"
+        let tile2
+        function roll(){
+
+            let sound = document.getElementById("rollSound");
+            sound.play();
+            let random2=Math.ceil(Math.random(1,6)*6)
+            console.log(random2)
+            imgx.setAttribute('src',a[random2])
+
+            if(st+random2<=100){
+                st=st+random2
+                 tile2 = document.getElementsByClassName(`div${st}`)[0];
+                tile2.appendChild(divp2)
+            }
+            if(st==4){
+                st =25;
+                 ttile2 = document.getElementsByClassName(`div${st}`)[0];
+                tile2.appendChild(divp2)
+            }
+            if(st==27){
+                st=5;
+                 ttile2 = document.getElementsByClassName(`div${st}`)[0];
+                tile2.appendChild(divp2)
+            }
+            if(st==13){
+                st=46;
+                ttile2 = document.getElementsByClassName(`div${st}`)[0];
+                tile2.appendChild(divp2)
+            }
+            if(st==40){
+                st=3;
+                ttile2 = document.getElementsByClassName(`div${st}`)[0];
+                tile2.appendChild(divp2)
+            }
+            if(st==43){
+                st=8;
+                tile2 = document.getElementsByClassName(`divp2${c}`)[0];
+                tile2.appendChild(divp2)
+            }
+            if(st==33){
+                st=49;
+                ttile2 = document.getElementsByClassName(`div${st}`)[0];
+                tile2.appendChild(divp2)
+            }
+            if(st==50){
+                st=69;
+                ttile2 = document.getElementsByClassName(`div${st}`)[0];
+                tile2.appendChild(divp2)
+            }
+            if(st==42){
+                st=63;
+                ttile2 = document.getElementsByClassName(`div${st}`)[0];
+                tile2.appendChild(divp2)
+            }
+            if(st==62){
+                st=81;
+                ttile2 = document.getElementsByClassName(`div${st}`)[0];
+                tile2.appendChild(divp2)
+            }
+            if(st==66){
+                st=45;
+                ttile2 = document.getElementsByClassName(`div${st}`)[0];
+                tile2.appendChild(divp2)
+            }
+            if(st==76){
+                st=58;
+                ttile2 = document.getElementsByClassName(`div${st}`)[0];
+                tile2.appendChild(divp2)
+            }
+            if(st==74){
+                st=92;
+                ttile2 = document.getElementsByClassName(`div${st}`)[0];
+                tile2.appendChild(divp2);
+            }
+            if(st==89){
+                st=53;
+                ttile2 = document.getElementsByClassName(`div${st}`)[0];
+                tile2.appendChild(divp2)
+            }
+            if(st==54){
+                st=31;
+                ttile2 = document.getElementsByClassName(`div${st}`)[0];
+                tile2.appendChild(divp2)
+            }
+            if(st==99){
+                st=41;
+                ttile2 = document.getElementsByClassName(`div${st}`)[0];
+                tile2.appendChild(divp2)
+            }
+
+            if(st+random2==100){
+                document.getElementById("head").innerText="you won"
+            }
+             tile2=document.getElementsByClassName(`div${st}`)[0]
+            tile2.appendChild(divp2)
+
+            
+
+            document.getElementsByClassName('btn1')[0].style.display="block"
+            document.getElementsByClassName('btn')[0].style.display="none"
+            
+
+            // document.getElementsByClassName(div${st})[0].style.backgroundColor="green"
+        }
+            // let b=""
+            // let a='123456789ABCDEF'
+            // for(let i=0;i<6;i++){
+            //     b=b+a[Math.floor(Math.random()*15)]
+            // }
+            // let color="#"+b
+        //     div.style.backgroundColor="green"
+        //     div.style.color="white"
+        // }
+
+
+
+
+
+        // for(let i=1;i<=100;i++){
+        //     let div=document.getElementsByClassName(div${i})[0]
+            // let b=""
+            // let a='123456789ABCDEF'
+            // for(let i=0;i<6;i++){
+            //     b=b+a[Math.floor(Math.random()*15)]
+            // }
+            // let color="#"+b
+            // div.style.backgroundColor=color
+            // div.style.color="white"
+        // }
+        // let ins=1
+        // let div=document.getElementsByClassName(div${i})[0]
+        // for()
+
+
+
+    </script>
+</body>
+</html>

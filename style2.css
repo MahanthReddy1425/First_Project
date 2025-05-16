@@ -1,0 +1,27 @@
+
+
+
+table{
+    border: 2px solid red;
+}
+h1{
+    color:blueviolet;
+}
+h2{
+    color:aqua
+}
+h3{
+    color: rgba(100,100,100,1);
+}
+h4{
+    color: brown;
+}
+p{
+    color: red;
+}
+#L{
+    background-color: red;
+}
+#i{
+    background-color: blue;
+}

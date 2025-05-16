@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        body{
+            background: url('./bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .form_div{
+            height:370px;
+            width: 400px;
+            background-color: rgba(221, 30, 30, 0.63);
+            padding-top: 50px;
+            padding-left:50px;
+            padding-right: 50px;
+            box-sizing: border-box;
+            margin-top: 150px;
+            margin-left: 500px;
+            font-size: 1.5em;
+            border-radius: 9px;
+            color: white;
+
+        }
+        .block{
+                display: block;
+            }
+        .input{
+                background-color: rgb(67, 87, 75);
+                width: 90%;
+                font-size: 24px;
+                margin-top: 10px;
+                margin-right: 20px;
+                padding: 5px;
+                color:rgb(180, 155, 107)
+            }
+            .input:focus{
+                background-color: rgb(173, 187, 204);
+                outline: none;
+            }
+            button{
+                margin-left: 100px;
+                margin-left:100px ;
+                height: 30px;
+                width: 80px;
+                font-size: 0.76em;
+                background-color: aqua;
+                border-radius: 9px;
+                border:none;
+                color:aliceblue;
+            }
+            button:hover{
+                color: black;
+                background-color: blanchedalmond;
+            }
+            radio{
+                padding: 5px;
+            }
+    </style>
+</head>
+<body>
+    <div class="form_div">
+        <form action="">
+            <div class="ip_username">
+                
+            <label class="block" for="username"><b>Username:</b></label>
+            <input class="input" type="text" placeholder="username" name="username" id="username">
+            </div><br>
+            <div class="ip_password">
+                <label  class="block"><b>Password</b></label>
+                <input class="input" type="password" name="password" id="password" placeholder="password">
+            </div><br>
+            <div class="ip_gender">
+                <label for="ip_gender"><b>Male</b></label>
+                <input type="radio" name="gender" id="male" value="Male">
+                <label for="ip_gender"><b>Female</b></label>
+                <input type="radio" name="gender" id="female" value="Female">
+            </div><br>
+            <div class="submit">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

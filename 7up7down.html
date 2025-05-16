@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            position: relative;
+            display: flex;
+        }
+        .head{
+            position: absolute;
+            width: 350px;
+            height: 80px;
+            left: 500px;
+            background-color: rgb(85, 161, 158);
+            border-radius: 50%;
+            span{
+                position: absolute;
+                left: 65px;
+                top:-20px;
+                font-size: 25px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                b{
+                    font-size: 45px;
+                }
+            }
+
+        }
+        #div1,#div2,#div3{
+            position: absolute;
+            top: 110px;
+            width: 180px;
+            height: 200px;
+            background-color: rgb(101, 142, 197);
+            border: 5px solid rgb(83, 77, 77);
+            font-size: 50px;
+        }
+        #div1{
+           left: 250px;
+        }
+        #div2{
+            left: 550px;
+            font-size:70px ;
+        }
+        #div3{
+            left: 850px;
+        }
+        .input
+        {
+            font-size: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            label,input{
+                position: absolute;
+                top: 400px;
+                left: 500px;
+            }            
+            input{
+                left: 780px;
+                width: 130px;
+                height: 30px;
+                border: 2px solid rgb(16, 46, 179);
+            }
+        }
+        .balance{
+            width: 550px;
+            height: 50px;
+            background-color: aquamarine;
+            position: absolute;
+            top: 550px;
+            left: 400px;
+            span{
+                font-size: 25px;
+                position: absolute;
+                top: 10px;
+                left: 100px;
+                border-radius: 5px;
+            }
+        }
+        .res1,.res2{
+            position: absolute;
+            top: 350px;
+            width: 100px;
+            height: 100px;
+            border: 5px solid rgb(83, 77, 77);
+            font-size: 50px;
+            display: none;
+        }
+        .res1{left: 650px;}
+        .res2{left: 520px;}
+        .finres{
+            position: absolute;
+            width: 350px;
+            height: 80px;
+            top: 0px;
+            left: 500px;
+            background-color: rgb(85, 161, 158);
+            border-radius: 50%;
+            padding-top: 10px;
+            display: none;
+            span{
+                position: absolute;
+                left: 100px;
+                top:20px;
+                font-size: 25px;
+                padding-left: 10px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                
+            }
+
+        }
+        .exit_res{
+            width: 400px;
+            height: 250px;
+            position: absolute;
+            top: 200px;
+            left: 450px;
+            background-color: rgb(101, 142, 197);
+            border: 5px solid rgb(83, 77, 77);
+            font-size: 25px;
+            border-radius: 10px;
+            display: none;
+            .ers{
+                position: absolute;
+                top: 15px;
+                left: 15px;
+            }
+        }
+        #play_again,#exit{
+            position: absolute;
+            top: 480px;
+            width: 120px;
+            height: 40px;
+            background-color: rgb(101, 142, 197);
+            border: 2px solid rgb(83, 77, 77);
+            font-size: 25px;
+            display: none;
+        }
+        #play_again{
+            left: 500px;
+            padding-left: 10px;
+            padding-top: 10px;
+            background-color: rgb(218, 126, 21);
+        }
+        #exit{
+            left: 650px;
+            width: 100px;
+            padding-left: 40px;
+            padding-top: 10px;
+            background-color: rgb(95, 39, 158);
+
+        }
+        
+        </style>
+</head>
+<body>
+    <div class="main">
+        <div class="head"><span><br><b>7</b> UP - <b>7</b> DOWN</span></div>
+        <div class="finres"><span class="fins">jkkjjnk</span></div>
+
+        <button id="div1" onclick="d1()">7 <br> Up</button>
+        <button id="div2" onclick="d2()">7</button>
+        <button id="div3" onclick="d3()">7 <br> down</button>
+        <div class="input"><label for="" >Enter bet amount: <br> 
+        </label><input type="text" id="bet"></div>
+        <div class="res1"><img src="" alt="" class="res1i" width="100px" height="100px"></div>
+            <div class="res2"><img src="" alt="" class="res2i" width="100px" height="100px"></div>
+        <div id="play_again" onclick="pa()">Play Again</div>
+        <div id="exit" onclick="exit()">Exit</div>
+        <div class="balance"><span class="bals"></span> </div>
+        <div class="exit_res"><span class="ers"></span></div>
+        <audio id="rollSound" src='/img/dice-sound.mp3' ></audio>
+    </div>
+    <script>document.getElementById('div1').addEventListener('onclick',div1)
+document.getElementById('div2').addEventListener('onclick',div2)
+document.getElementById('div3').addEventListener('onclick',div3)
+document.getElementById('play_again').addEventListener('onclick',play_again)
+document.getElementById('exit').addEventListener('onclick',exit)
+let fr=document.getElementsByClassName('fins')[0]
+let x="123456"
+let a=['','/img/icons8-dice-one-32.png','/img/icons8-dice-two-32.png','/img/icons8-dice-three-32.png','/img/icons8-dice-four-32.png','/img/icons8-dice-five-32.png','/img/icons8-dice-six-32.png']
+let pn1=0
+let pn2=0
+let balance=0
+let s=""
+let img1=document.getElementsByClassName('res1i')[0]
+let img2=document.getElementsByClassName('res2i')[0]
+let w=0
+let loss=0
+let sound1
+let sound2
+let sound3
+function d1(){
+    sound1 = document.getElementById("rollSound");
+    sound1.play();
+    document.getElementsByTagName('button')[1].style.display='none'
+    document.getElementsByTagName('button')[2].style.display='none'
+    document.getElementsByClassName('input')[0].style.display='none'
+    document.getElementsByClassName('head')[0].style.display='none'
+    document.getElementsByTagName('button')[0].style.display='block'
+    document.getElementsByClassName('res1')[0].style.display='block'
+    document.getElementsByClassName('res2')[0].style.display='block'
+    let bet=document.getElementById('bet').value
+    document.getElementById('exit').style.display='block'
+    document.getElementById('play_again').style.display='block'
+    document.getElementsByClassName('finres')[0].style.display='block'
+    pn1=Math.ceil(Math.random(x)*6)
+    pn2=Math.ceil(Math.random(x)*6)
+    img1.setAttribute('src',a[pn1])
+img2.setAttribute('src',a[pn2])
+    if((pn1+pn2)>7){
+        balance=balance+parseInt(bet)
+        fr.innerText='You Won!'
+        console.log(typeof(balance),balance)
+        w+=1
+
+    }
+    else{
+        balance=balance-parseInt(bet)
+        fr.innerText="You lost!"
+        console.log(typeof(balance),balance)
+        loss+=1
+
+    }
+    document.getElementsByClassName('bals')[0].innerText=`Your balance amount is ${balance}`
+}
+function d2(){
+    sound2 = document.getElementById("rollSound");
+    sound2.play();
+    document.getElementsByTagName('button')[1].style.display='block'
+    document.getElementsByTagName('button')[0].style.display='none'
+    let bet=document.getElementById('bet').value
+    document.getElementsByClassName('head')[0].style.display='none'
+    document.getElementsByClassName('input')[0].style.display='none'
+    document.getElementsByTagName('button')[2].style.display='none'
+    document.getElementsByClassName('res1')[0].style.display='block'
+    document.getElementsByClassName('res2')[0].style.display='block'
+    document.getElementsByClassName('finres')[0].style.display='block'
+ document.getElementById('exit').style.display='block'
+    pn1=Math.ceil(Math.random(x)*6)
+    pn2=Math.ceil(Math.random(x)*6)
+    img1.setAttribute('src',a[pn1])
+img2.setAttribute('src',a[pn2])
+    document.getElementById('play_again').style.display='block'
+    if(pn1+pn2==7){
+        balance=balance+parseInt(bet)*2
+        console.log(typeof(balance),balance)
+        fr.innerText='You Won!'
+        w+=1
+    }
+    else{
+        balance=balance-parseInt(bet)
+        fr.innerText="You lost!"
+        console.log(typeof(balance),balance)
+        loss+=1
+
+    }
+    document.getElementsByClassName('bals')[0].innerText=`Your balance amount is ${balance}`
+}
+function d3(){
+    sound3 = document.getElementById("rollSound");
+    sound3.play();
+    
+    document.getElementsByTagName('button')[2].style.display='block'
+    document.getElementsByTagName('button')[0].style.display='none'
+    document.getElementsByClassName('head')[0].style.display='none'
+    document.getElementsByClassName('input')[0].style.display='none'
+    document.getElementsByTagName('button')[1].style.display='none'
+    let bet=document.getElementById('bet').value
+    pn1=Math.ceil(Math.random(x)*6)
+    pn2=Math.ceil(Math.random(x)*6)
+    img1.setAttribute('src',a[pn1])
+img2.setAttribute('src',a[pn2])
+    document.getElementsByClassName('res1')[0].style.display='block'
+    document.getElementsByClassName('res2')[0].style.display='block'
+    document.getElementsByClassName('finres')[0].style.display='block'
+     document.getElementById('exit').style.display='block'
+    document.getElementById('play_again').style.display='block'
+    if(pn1+pn2<7){
+        balance=balance+parseInt(bet)
+        fr.innerText='You Won!'
+        console.log(typeof(balance),balance)
+        w+=1
+
+    }
+        else{
+        balance=balance-parseInt(bet)
+        fr.innerText="You lost!"
+        console.log(typeof(balance),balance)
+        loss+=1
+
+    }
+    document.getElementsByClassName('bals')[0].innerText=`Your balance amount is ${balance}`
+}
+
+
+
+   console.log(balance)
+
+function pa(){
+    document.getElementsByTagName('button')[2].style.display='block'
+    document.getElementsByTagName('button')[0].style.display='block'
+    document.getElementsByClassName('head')[0].style.display='block'
+    document.getElementsByClassName('input')[0].style.display='block'
+    document.getElementsByTagName('button')[1].style.display='block'
+    document.getElementsByClassName('res1')[0].style.display='none'
+    document.getElementsByClassName('res2')[0].style.display='none'
+    document.getElementsByClassName('finres')[0].style.display='none'
+     document.getElementById('exit').style.display='none'
+    document.getElementById('play_again').style.display='none'
+}
+function exit(){
+    document.getElementsByTagName('button')[2].style.display='none'
+    document.getElementsByTagName('button')[0].style.display='none'
+    document.getElementsByClassName('head')[0].style.display='none'
+    document.getElementsByClassName('input')[0].style.display='none'
+    document.getElementsByTagName('button')[1].style.display='none'
+    document.getElementsByClassName('res1')[0].style.display='none'
+    document.getElementsByClassName('res2')[0].style.display='none'
+    document.getElementsByClassName('finres')[0].style.display='none'
+    document.getElementsByClassName('exit_res')[0].style.display='block'
+    document.getElementsByClassName('balance')[0].style.display='none'
+
+     document.getElementById('exit').style.display='none'
+    document.getElementById('play_again').style.display='none'
+    let l=document.getElementsByClassName('ers')[0]
+    if(balance>0){
+        l.innerText=`Total games played ${(w+loss)}\n\n\t    Win : ${w}\nLost : ${loss}\n\n You gained ${balance}`
+        balance=0
+    }
+    else if(balance<0){
+        l.innerText=`Total games played ${(w+loss)}\n\n\t    Win : ${w}\nLost : ${loss}\n \nYou lost ${balance}`
+        balance=0
+    }
+    else{
+        l.innerText=`Total games played ${(w+loss)}\n\n \t    Win : ${w}\nLost : ${loss}\n\n  You didn't lost and didn't gain`
+    }
+
+}</script>
+</body>
+</html>
